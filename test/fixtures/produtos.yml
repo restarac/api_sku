@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  nomeReduzido: MyString
+  palavrasChave: MyString
+  especificacoesTecnicas: MyText
+
+two:
+  nome: MyString
+  nomeReduzido: MyString
+  palavrasChave: MyString
+  especificacoesTecnicas: MyText

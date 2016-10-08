@@ -1,0 +1,5 @@
+- instalar usando o railsinstaller (É instalado a versão 4.X.X do rails)
+- Rodar o comando `gem install rails`, assim será atualizado para a ultima versão.
+- baixar o projeto do git.
+- executar as migrações para criação do banco local `rails migrate --RAILS_ENV=development`
+-

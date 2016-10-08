@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  preco: 
+  preco: 
+  precoDe: 
+  precoDe: 
+  disponivel: 1
+
+two:
+  preco: 
+  preco: 
+  precoDe: 
+  precoDe: 
+  disponivel: 1

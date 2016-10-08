@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
-  get 'sku_api/index'
 
-  post 'sku_api/create'
+  resources :produtos do 
+    resources :skus do
+      resources :disponibilidades
+    end
+  end
 
-  get 'sku_api/show'
+  # resources :produtos, shallow: true do 
+  #   # end
 
-  put 'sku_api/update'
-
-  delete 'sku_api/destroy'
+  # resources :skus do
+  #   resources :disponibilidades
+  # end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #http://weblog.jamisbuck.org/2007/2/5/nesting-resources
 end
