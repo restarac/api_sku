@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
 
-  constraints subdomain: 'api' do
-    scope module: 'api' do
-      namespace :v1 do
-        
-        resources :produtos do 
-          resources :skus do
-            resources :disponibilidades
-          end
-        end
-
-      end #namespace ending
+  namespace :v1 do
+    
+    resources :produtos do 
+      resources :skus do
+        resources :disponibilidades
+      end
     end
-  end
+
+  end #namespace ending
 
   # resources :produtos, shallow: true do 
   #   # end

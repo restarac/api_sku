@@ -1,7 +1,7 @@
 class Sku < ApplicationRecord
-  belongs_to :produto
+  belongs_to :produto, inverse_of: :sku
   
-  has_many :imagem
-  has_one :dimensao
-  has_one :disponibilidade
+  has_many :imagems, inverse_of: :sku
+  has_one :dimensao, inverse_of: :sku
+  has_one :disponibilidade, inverse_of: :sku
 end

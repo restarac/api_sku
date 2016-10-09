@@ -1,3 +1,3 @@
-class produto < ApplicationRecord
-	has_many :sku
+class Produto < ApplicationRecord
+	has_many :sku, inverse_of: :produto
 end
