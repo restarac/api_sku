@@ -1,24 +1,17 @@
-# README
+# Api Skus (Em construção)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Servico que disponibiliza uma API Restful para:
 
-Things you may want to cover:
+ - Produto
+ - Skus 
+ - Disponibilidades (estoque)
 
-* Ruby version
+# Como executar localmente
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- instalar usando o railsinstaller (É instalado a versão 4.X.X do rails)
+- Rodar o comando `gem install rails`, assim será atualizado para a ultima versão.
+- baixar o projeto do git.
+- Atualizar as gems existentes, bastando executar o comando `bundle` dentro do projeto
+- Executar as migrações para criação do banco local `rails migrate --RAILS_ENV=development`
+- Iniciar o rails, `rails s` (para mais comandos `rails -h`)
+- Acessar o caminho `GET localhost:3000/v1/produtos`

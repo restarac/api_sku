@@ -1,5 +1,5 @@
 module V1
-    class ProdutoSerializer < ActiveModel::Serializer
+    class DimensaoSerializer < ActiveModel::Serializer
       attributes :largura, :altura, :comprimento, :peso
     end
 end

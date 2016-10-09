@@ -6,7 +6,7 @@ module V1
     def index
       @skus = Sku.all
 
-      render json: @skus
+      render json: @skus, include: 'imagems,dimensao'
     end
 
     # GET /skus/1
@@ -17,9 +17,8 @@ module V1
     # POST /skus
     def create
       @sku = Sku.new(sku_params)
-      @sku.produto = Produto.find(params[:produto_id])
-
-      puts @sku
+      @produto = Produto.find(params[:produto_id])
+      @sku.produto = @produto
 
       if @sku.save
         render json: @sku, status: :created
@@ -50,7 +49,9 @@ module V1
 
       # Only allow a trusted parameter "white list" through.
       def sku_params
-        params.permit(:nome, :nomeReduzido, :dimensao, :imagems_id, :foraDeLinha, :url, :modelo)
+        params.permit(:nome, :nomeReduzido,:foraDeLinha, :url, :modelo)
+        params.permit(dimensaos: [:altura, :largura, :comprimento, :peso])
+        params.permit(imagems: [:menor, :maior, :zoom] )
       end
   end
 end
